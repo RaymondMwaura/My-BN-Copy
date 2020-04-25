@@ -287,7 +287,7 @@ const getSearchedRequests = async (userId, query) => {
     },
   );
   if (requests.length === 0) {
-    throw new ErrorHandler('no matching records found', 404);
+    return requests;
   }
 
   return requests;
@@ -376,7 +376,7 @@ const getSearchedManagerRequests = async (lineManagerId, query) => {
     type: db.sequelize.QueryTypes.SELECT,
   });
   if (requests.length === 0) {
-    throw new ErrorHandler('no matching records found', 404);
+    return requests;
   }
 
   return requests.map(({
