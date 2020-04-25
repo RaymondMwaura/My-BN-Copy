@@ -27,6 +27,5 @@ module.exports = {
     queryInterface.removeColumn('bookings', 'paymentType'),
     queryInterface.removeColumn('bookings', 'isPaid'),
     queryInterface.removeColumn('bookings', 'amount'),
-    queryInterface.sequelize.query('DROP TYPE IF EXISTS "enum_bookings_paymentType"'),
   ])
 };
