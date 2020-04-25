@@ -17,7 +17,7 @@ module.exports = {
       allowNull: true,
     }),
     queryInterface.addColumn('users', 'twoFADataURL', {
-      type: Sequelize.TEXT('long'),
+      type: Sequelize.TEXT,
       allowNull: true,
     }),
   ]),
