@@ -45,7 +45,8 @@ describe(('/GET /search/requests'), () => {
     res = await request(app)
       .get(`${prefix}/search/requests?searchString=${searchString}&travelDate=${travelDate}&returnDate=${returnDate}`)
       .set('Authorization', requesterToken);
-    expect(res.status).eql(404);
+    expect(res.status).eql(200);
+    expect(res.body.data.length).eql(0);
   });
 
   it(('it still returns searched records when user doesn\'t supply dates in request'), async () => {
@@ -99,7 +100,8 @@ describe(('/GET /search/requests'), () => {
     res = await request(app)
       .get(`${prefix}/search/requests?byLineManager=true&searchString=${searchString}&travelDate=${travelDate}&returnDate=${returnDate}`)
       .set('Authorization', lineManagerToken);
-    expect(res.status).eql(404);
+    expect(res.status).eql(200);
+    expect(res.body.data.length).eql(0);
   });
 
   it(('it still returns searched records when user doesn\'t supply dates in request LINEMANAGER'), async () => {
