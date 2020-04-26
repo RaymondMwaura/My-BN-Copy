@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/RaymondMwaura/boondocks-bn-backend.svg?branch=develop)](https://travis-ci.org/RaymondMwaura/boondocks-bn-backend)
+[![Build Status](https://travis-ci.org/RaymondMwaura/My-BN-Copy-Backend.svg?branch=develop)](https://travis-ci.org/RaymondMwaura/My-BN-Copy-Backend)
 [![Coverage Status](https://coveralls.io/repos/github/RaymondMwaura/My-BN-Copy-Backend/badge.svg)](https://coveralls.io/github/RaymondMwaura/My-BN-Copy-Backend)
 [![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com)
 
