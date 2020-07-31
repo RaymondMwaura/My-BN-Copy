@@ -97,6 +97,7 @@ class Hotel {
     }
     const status = 'available';
 
+
     const room = await roomService.create({
       hotelId,
       name,
@@ -269,6 +270,7 @@ class Hotel {
     );
   }
 
+
   /**
    * Creates a new feedback.
    * @param {object} req request
@@ -282,6 +284,7 @@ class Hotel {
     const addedFeedback = await addFeeback({ userId, hotelId, feedback });
     return Responses.handleSuccess(201, 'Feedback posted successfully', res, addedFeedback);
   }
+
 
   /**
    * Get all feedback

@@ -1,11 +1,10 @@
-/* eslint-disable import/no-dynamic-require */
-/* eslint-disable global-require */
+/* eslint-disable arrow-parens */
 import { readdirSync } from 'fs';
-import path from 'path';
+import { basename as _basename, join } from 'path';
 import { Sequelize } from 'sequelize';
 import configEnv from '../config';
 
-const basename = path.basename(__filename);
+const basename = _basename(__filename);
 const config = configEnv.database;
 const db = {};
 
@@ -14,7 +13,7 @@ const sequelize = new Sequelize(config.url, { logging: false });
 readdirSync(__dirname)
   .filter(file => (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js'))
   .forEach(file => {
-    const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes);
+    const model = sequelize.import(join(__dirname, file));
     db[model.name] = model;
   });
 

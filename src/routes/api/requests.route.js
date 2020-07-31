@@ -251,6 +251,7 @@ router.get(
   catchErrors(requests.getOne)
 );
 
+
 /**
  * @swagger
  *

@@ -59,7 +59,7 @@ class UserController {
   async findUser(req, res) {
     const user = await UserService.findUserByEmail(req.body.email);
     if (!user) {
-      return Responses.handleError(400, 'invalid credentials', res);
+      return Responses.handleError(404, 'invalid credentials', res);
     }
     if (!hash.compareSync(req.body.password, user.password)) {
       return Responses.handleError(400, 'invalid credentials', res);
@@ -310,6 +310,7 @@ class UserController {
 
     url = await filesService.s3Upload({ path, filename, mimetype }, 'documents');
 
+
     const { userId } = res.locals.user;
 
     const document = await UserService.addDocument({ name, url, userId });
@@ -336,6 +337,7 @@ class UserController {
     }
     return Responses.handleError(409, 'Document does not belong to you', res);
   }
+
 
   /**
    * Retrieve travel document
