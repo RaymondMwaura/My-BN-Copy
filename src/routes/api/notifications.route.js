@@ -3,6 +3,7 @@ import notification from '../../controllers/notification.controller';
 import catchErrors from '../../utils/helper';
 import { decodeQueryToken, verifyUser } from '../../middlewares/checkToken';
 
+
 const route = express.Router();
 
 /**

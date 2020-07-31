@@ -183,6 +183,7 @@ describe('Travel documents', () => {
         });
     });
 
+
     it('PATCH /documents/:id/verify Verify a documents', (done) => {
       request(app)
         .patch(`${prefix}/documents/2/verify`)

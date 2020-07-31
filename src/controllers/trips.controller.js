@@ -171,6 +171,7 @@ class Trip {
 
     await messenger(phoneNumber, `New request initiated by ${currentUser.name}. Kindly review`);
 
+
     const { lineManager } = currentUser;
     const notification = await NotificationService.createNotification({
       requestId,

@@ -6,8 +6,9 @@ import db from '../models';
 import JWTToken from '../utils/jwt';
 
 export const getTokenAfterSignIn = async (res, user) => {
-  const token = await JWTToken.signToken(user);
-  const { twoFASecret, twoFAType, twoFADataURL } = user;
+  const userDetails = user.dataValues;
+  const token = await JWTToken.signToken(userDetails);
+  const { twoFASecret, twoFAType, twoFADataURL } = userDetails;
   let authRoute = '/home';
   if (twoFAType === 'sms_text' || twoFAType === 'authenticator_app') {
     authRoute = '/login-2-fa';
@@ -30,7 +31,7 @@ class AuthController {
    */
   async facebookSignIn(req, res) {
     const { first_name, last_name, email } = req.user._json;
-    const newOrOldUser = await db.user.findOrCreate({
+    await db.user.findOrCreate({
       where: { email },
       defaults: {
         firstName: first_name,
@@ -38,8 +39,7 @@ class AuthController {
         email,
         isVerified: true,
       },
-    });
-    await getTokenAfterSignIn(res, newOrOldUser[0].dataValues);
+    }).spread((user$, isCreated) => getTokenAfterSignIn(res, user$));
   }
 
   /**
@@ -53,7 +53,7 @@ class AuthController {
    */
   async googleSignIn(req, res) {
     const { displayName, emails } = req.user;
-    const newOrOldUser = await db.user.findOrCreate({
+    await db.user.findOrCreate({
       where: { email: emails[0].value },
       defaults: {
         firstName: displayName.split(' ')[0],
@@ -61,8 +61,7 @@ class AuthController {
         email: emails[0].value,
         isVerified: true,
       },
-    });
-    await getTokenAfterSignIn(res, newOrOldUser[0].dataValues);
+    }).spread((user, isCreated) => getTokenAfterSignIn(res, user));
   }
 }
 

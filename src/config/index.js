@@ -4,6 +4,7 @@ const merge = require('lodash.merge');
 const dotenv = require('dotenv');
 const config = require('./env/default');
 
+
 if (process.env.NODE_ENV !== 'production') {
   dotenv.config();
   let localConfig = {};

@@ -151,6 +151,7 @@ describe('User profile', () => {
         });
     });
 
+
     it('it should return a 409 response when he sets him as own lineManager', (done) => {
       request(app)
         .patch(`${prefix}/user/update-profile`)
