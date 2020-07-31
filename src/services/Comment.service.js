@@ -15,7 +15,6 @@ class CommentService {
   async postRequestComment(userId, requestId, comment) {
     const requestData = await db.request.findOne({ where: { id: requestId } });
 
-
     if (!requestData) {
       throw new AppError('request resource not found', 404);
     }
@@ -82,7 +81,6 @@ class CommentService {
       returning: true,
       plain: true
     });
-
 
     return deletedCommentData[1];
   }
