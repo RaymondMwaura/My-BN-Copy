@@ -46,7 +46,6 @@ const chat = async (io) => {
     const user = await loggedInUser(socket);
     socket.emit('connection');
 
-
     if (user) {
       socket.username = `${user.firstName}`;
       socket.emit('connected_user', socket.username);

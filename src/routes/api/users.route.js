@@ -392,7 +392,6 @@ router.get(
   catchErrors(getUserProfile)
 );
 
-
 router.post(
   '/users/documents',
   verifyUser,

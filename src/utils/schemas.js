@@ -153,7 +153,6 @@ const roomSchema = Joi.object().keys({
   allowUnknown: true
 });
 
-
 const documentSchema = Joi.object().keys({
   name: Joi.string().required(),
 }).options({
