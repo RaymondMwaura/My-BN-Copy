@@ -177,7 +177,6 @@ const getManagerRequestByStatus = async (status, userId) => {
       }],
   });
 
-
   const requests = [];
   await userRequests.forEach(user => {
     requests.push(...user.requests);
