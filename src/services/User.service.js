@@ -64,7 +64,6 @@ class UserServices {
       gender, department, lineManagerId, phoneNumber, remember, profilePicture
     } = attributes;
 
-
     const currentUserId = (await db.user.findOne({
       where: { email: email$ },
       attributes: ['id']

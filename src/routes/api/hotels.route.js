@@ -417,7 +417,6 @@ router.get(
   catchErrors(hotels.getAllHotels)
 );
 
-
 /**
  * @swagger
  *
@@ -452,7 +451,6 @@ router.post(
   validation,
   catchErrors(hotels.addedFeedback)
 );
-
 
 /**
  * @swagger
@@ -503,7 +501,6 @@ router.get(
   verifyUser,
   catchErrors(hotels.getMostVisitedDestination),
 );
-
 
 /**
  * @swagger
@@ -653,7 +650,6 @@ router.get(
   verifyUser,
   catchErrors(ratings.fetchHotelRating)
 );
-
 
 /**
  * @swagger

@@ -25,7 +25,7 @@ describe('/auth/signin', () => {
         email: 'unregistered@unregistered.com',
         password: 'unregistered',
       });
-    expect(res.status).eql(404);
+    expect(res.status).eql(400);
   });
   it('should not login valid user with wrong password', async () => {
     const res = await request(app)
