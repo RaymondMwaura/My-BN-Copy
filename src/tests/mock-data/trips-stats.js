@@ -6,6 +6,7 @@ export default {
       lastName: 'Doe',
       password: '12345678',
       email: 'john@barefoot.com',
+      phoneNumber: '+254712345678',
       role: 'manager'
     },
     {
@@ -14,6 +15,7 @@ export default {
       lastName: 'Doe',
       password: '12345678',
       email: 'eric1@barefoot.com',
+      phoneNumber: '+254712345111',
       role: 'manager'
     },
     {
@@ -22,6 +24,7 @@ export default {
       lastName: 'Doey',
       password: '12345678',
       email: 'jonny@barefoot.com',
+      phoneNumber: '+254712345222',
       lineManagerId: 10,
       role: 'requester'
     },
@@ -31,6 +34,7 @@ export default {
       lastName: 'Doejohn',
       password: '12345678',
       email: 'jondoe@barefoot.com',
+      phoneNumber: '+254712345333',
       role: 'travel_administrator'
     }],
   trips: [

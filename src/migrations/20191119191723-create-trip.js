@@ -50,5 +50,8 @@ module.exports = {
       type: Sequelize.DATE
     }
   }),
-  down: (queryInterface) => queryInterface.dropTable('trips')
+  down: (queryInterface) => Promise.all([
+    queryInterface.sequelize.query('DROP TYPE IF EXISTS enum_trips_type CASCADE'),
+    queryInterface.dropTable('trips'),
+  ]),
 };

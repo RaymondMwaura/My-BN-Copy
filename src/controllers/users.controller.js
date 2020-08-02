@@ -28,6 +28,7 @@ class UserController {
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       email: req.body.email,
+      phoneNumber: req.body.phoneNumber,
       password: passwordHash,
     };
     const user = await db.user.create(userData);

@@ -1,7 +1,8 @@
 module.exports = {
-  up: (queryInterface) => queryInterface.addConstraint('hotels', ['locationId', 'street', 'name'], {
+  up: (queryInterface) => queryInterface.addConstraint('hotels', {
     type: 'unique',
-    name: 'loc_name_index'
+    name: 'loc_name_index',
+    fields: ['locationId', 'street', 'name'],
   }),
   down: (migration) => {
     migration.sequelize.query('ALTER TABLE hotels DROP CONSTRAINT loc_name_index');

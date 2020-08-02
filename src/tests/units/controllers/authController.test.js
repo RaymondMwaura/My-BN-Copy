@@ -24,7 +24,8 @@ const OAuthData = {
             id: '10220876652049896',
             email: 'gildniy05@gmail.com',
             last_name: 'Niyigena',
-            first_name: 'Gildas'
+            first_name: 'Gildas',
+            phoneNumber: '+254712345678',
           }
       }
     }

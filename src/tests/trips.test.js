@@ -38,6 +38,7 @@ describe('/trips/{ oneway | return }', () => {
       lastName: 'McCain',
       password: Hash.generateSync('1234567e'),
       email: 'john@mccain.com',
+      phoneNumber: '+254712345678',
       lineManagerId: manager.id
     });
     token = await tokenizer.signToken({

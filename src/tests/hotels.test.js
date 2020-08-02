@@ -29,6 +29,7 @@ describe('/hotels', () => {
       lastName: 'McCain',
       password: Hash.generateSync('1234567e'),
       email: 'john@mccain6.com',
+      phoneNumber: '+254712345678',
       role: 'travel_administrator'
     });
     await db.user.create({
@@ -37,6 +38,7 @@ describe('/hotels', () => {
       lastName: 'McCain',
       password: Hash.generateSync('1234567e'),
       email: 'john@mccain.com',
+      phoneNumber: '+254712345111',
       role: 'requester'
     });
     await db.user.create({
@@ -45,6 +47,7 @@ describe('/hotels', () => {
       lastName: 'McCain',
       password: Hash.generateSync('1234567e'),
       email: 'john@mccain00.com',
+      phoneNumber: '+254712345222',
       role: 'travel_administrator'
     });
 
@@ -54,6 +57,7 @@ describe('/hotels', () => {
       lastName: 'McCain',
       password: Hash.generateSync('1234567e'),
       email: 'john@mccain000.com',
+      phoneNumber: '+254712345333',
       role: 'suppliers'
     });
 

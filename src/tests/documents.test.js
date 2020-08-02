@@ -21,6 +21,7 @@ describe('Travel documents', () => {
       lastName: 'Doe',
       password: '12345678',
       email: 'john@barefoot.com',
+      phoneNumber: '+254712345678',
       role: 'requester',
     });
     user2 = await db.user.create({
@@ -29,6 +30,7 @@ describe('Travel documents', () => {
       lastName: 'Doe',
       password: '12345678',
       email: 'johndoe@barefoot.com',
+      phoneNumber: '+254712345111',
       role: 'requester',
     });
 
@@ -38,6 +40,7 @@ describe('Travel documents', () => {
       lastName: 'Doe',
       password: '12345678',
       email: 'johndoee@barefoot.com',
+      phoneNumber: '+254712345222',
       role: 'travel_administrator',
     });
 

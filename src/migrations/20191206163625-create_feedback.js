@@ -10,6 +10,7 @@ module.exports = {
     userId: {
       allowNull: false,
       type: Sequelize.INTEGER,
+      onDelete: 'CASCADE',
       references: {
         model: 'users',
         key: 'id',
@@ -22,6 +23,7 @@ module.exports = {
     hotelId: {
       allowNull: false,
       type: Sequelize.INTEGER,
+      onDelete: 'CASCADE',
       references: {
         model: 'hotels',
         key: 'id',

@@ -15,7 +15,8 @@ describe('/auth/signin', () => {
       firstName: 'John',
       lastName: 'McCain',
       password: Bcrypt.generateSync('1234567e'),
-      email: 'john@mccain.com'
+      email: 'john@mccain.com',
+      phoneNumber: '+254712345678',
     });
   });
   it('should not login unregistered user', async () => {

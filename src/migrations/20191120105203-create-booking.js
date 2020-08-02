@@ -33,5 +33,8 @@ module.exports = {
       type: Sequelize.DATE
     }
   }),
-  down: (queryInterface) => queryInterface.dropTable('bookings')
+  down: (queryInterface) => Promise.all([
+    queryInterface.sequelize.query('DROP TYPE IF EXISTS "enum_bookings_paymentType" CASCADE'),
+    queryInterface.dropTable('bookings'),
+  ])
 };
