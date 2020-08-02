@@ -1,7 +1,8 @@
 module.exports = {
   up: (queryInterface, Sequelize) => Promise.all([
-    queryInterface.addConstraint('users', ['lineManagerId'], {
+    queryInterface.addConstraint('users', {
       type: 'FOREIGN KEY',
+      fields: ['lineManagerId'],
       name: 'users_linemanagerid_fkey',
       references: {
         table: 'users',
@@ -10,8 +11,9 @@ module.exports = {
       onDelete: 'cascade',
       onUpdate: 'cascade',
     }),
-    queryInterface.addConstraint('hotels', ['userId'], {
+    queryInterface.addConstraint('hotels', {
       type: 'FOREIGN KEY',
+      fields: ['userId'],
       name: 'hotels_userId_fkey',
       references: {
         table: 'users',
@@ -20,8 +22,9 @@ module.exports = {
       onDelete: 'cascade',
       onUpdate: 'cascade',
     }),
-    queryInterface.addConstraint('hotels', ['locationId'], {
+    queryInterface.addConstraint('hotels', {
       type: 'FOREIGN KEY',
+      fields: ['locationId'],
       name: 'hotels_locationId_fkey',
       references: {
         table: 'locations',
@@ -30,9 +33,10 @@ module.exports = {
       onDelete: 'cascade',
       onUpdate: 'cascade',
     }),
-    queryInterface.addConstraint('trips', ['hotelId'], {
+    queryInterface.addConstraint('trips', {
       type: 'FOREIGN KEY',
       name: 'trips_hotelId_fkey',
+      fields: ['hotelId'],
       allowNull: true,
       references: {
         table: 'hotels',
@@ -41,9 +45,10 @@ module.exports = {
       onDelete: 'cascade',
       onUpdate: 'cascade',
     }),
-    queryInterface.addConstraint('trips', ['userId'], {
+    queryInterface.addConstraint('trips', {
       type: 'FOREIGN KEY',
       name: 'trips_userId_fkey',
+      fields: ['userId'],
       references: {
         table: 'users',
         field: 'id',
@@ -51,8 +56,9 @@ module.exports = {
       onDelete: 'cascade',
       onUpdate: 'cascade',
     }),
-    queryInterface.addConstraint('trips', ['requestId'], {
+    queryInterface.addConstraint('trips', {
       type: 'FOREIGN KEY',
+      fields: ['requestId'],
       name: 'trips_requestId_fkey',
       references: {
         table: 'requests',
@@ -61,8 +67,9 @@ module.exports = {
       onDelete: 'cascade',
       onUpdate: 'cascade',
     }),
-    queryInterface.addConstraint('bookings', ['userId'], {
+    queryInterface.addConstraint('bookings', {
       type: 'FOREIGN KEY',
+      fields: ['userId'],
       name: 'bookings_userId_fkey',
       allowNull: true,
       references: {
@@ -72,8 +79,9 @@ module.exports = {
       onDelete: 'cascade',
       onUpdate: 'cascade',
     }),
-    queryInterface.addConstraint('bookings', ['hotelId'], {
+    queryInterface.addConstraint('bookings', {
       type: 'FOREIGN KEY',
+      fields: ['hotelId'],
       name: 'bookings_hotelId_fkey',
       allowNull: true,
       references: {
@@ -83,9 +91,10 @@ module.exports = {
       onDelete: 'cascade',
       onUpdate: 'cascade',
     }),
-    queryInterface.addConstraint('bookings', ['roomId'], {
+    queryInterface.addConstraint('bookings', {
       type: 'FOREIGN KEY',
       name: 'bookings_roomId_fkey',
+      fields: ['roomId'],
       allowNull: true,
       references: {
         table: 'rooms',
@@ -94,8 +103,9 @@ module.exports = {
       onDelete: 'cascade',
       onUpdate: 'cascade',
     }),
-    queryInterface.addConstraint('bookings', ['tripId'], {
+    queryInterface.addConstraint('bookings', {
       type: 'FOREIGN KEY',
+      fields: ['tripId'],
       name: 'bookings_tripId_fkey',
       allowNull: true,
       references: {
@@ -105,9 +115,10 @@ module.exports = {
       onDelete: 'cascade',
       onUpdate: 'cascade',
     }),
-    queryInterface.addConstraint('requests', ['userId'], {
+    queryInterface.addConstraint('requests', {
       type: 'FOREIGN KEY',
       name: 'requests_userId_fkey',
+      fields: ['userId'],
       references: {
         table: 'users',
         field: 'id',
@@ -115,9 +126,10 @@ module.exports = {
       onDelete: 'cascade',
       onUpdate: 'cascade',
     }),
-    queryInterface.addConstraint('comments', ['requestId'], {
+    queryInterface.addConstraint('comments', {
       type: 'FOREIGN KEY',
       name: 'comments_requestId_fkey',
+      fields: ['requestId'],
       references: {
         table: 'requests',
         field: 'id',
@@ -125,8 +137,9 @@ module.exports = {
       onDelete: 'cascade',
       onUpdate: 'cascade',
     }),
-    queryInterface.addConstraint('comments', ['userId'], {
+    queryInterface.addConstraint('comments', {
       type: 'FOREIGN KEY',
+      fields: ['userId'],
       name: 'comments_userId_fkey',
       references: {
         table: 'users',
@@ -135,8 +148,9 @@ module.exports = {
       onDelete: 'cascade',
       onUpdate: 'cascade',
     }),
-    queryInterface.addConstraint('conversations', ['userId'], {
+    queryInterface.addConstraint('conversations', {
       type: 'FOREIGN KEY',
+      fields: ['userId'],
       name: 'conversations_userId_fkey',
       references: {
         table: 'users',
@@ -145,9 +159,10 @@ module.exports = {
       onDelete: 'cascade',
       onUpdate: 'cascade',
     }),
-    queryInterface.addConstraint('ratings', ['userId'], {
+    queryInterface.addConstraint('ratings', {
       type: 'FOREIGN KEY',
       name: 'ratings_userId_fkey',
+      fields: ['userId'],
       references: {
         table: 'users',
         field: 'id',
@@ -155,9 +170,10 @@ module.exports = {
       onDelete: 'cascade',
       onUpdate: 'cascade',
     }),
-    queryInterface.addConstraint('ratings', ['hotelId'], {
+    queryInterface.addConstraint('ratings', {
       type: 'FOREIGN KEY',
       name: 'ratings_hotelId_fkey',
+      fields: ['hotelId'],
       references: {
         table: 'hotels',
         field: 'id',

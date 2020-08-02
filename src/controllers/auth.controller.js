@@ -29,13 +29,14 @@ class AuthController {
    *
    */
   async facebookSignIn(req, res) {
-    const { first_name, last_name, email } = req.user._json;
+    const { first_name, last_name, email, phoneNumber } = req.user._json;
     const newOrOldUser = await db.user.findOrCreate({
       where: { email },
       defaults: {
         firstName: first_name,
         lastName: last_name,
         email,
+        phoneNumber: (phoneNumber || 'notProvided'),
         isVerified: true,
       },
     });
@@ -59,6 +60,7 @@ class AuthController {
         firstName: displayName.split(' ')[0],
         lastName: displayName.split(' ')[1],
         email: emails[0].value,
+        phoneNumber: 'notProvided',
         isVerified: true,
       },
     });

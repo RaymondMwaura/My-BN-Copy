@@ -30,6 +30,7 @@ describe('/Requests/manager', () => {
       firstName: 'new',
       lastName: 'test',
       email: 'testnew@email.co',
+      phoneNumber: '+254712345678',
       password: Hash.generateSync('bttj6bt'),
       lineManagerId: manager.id
     });

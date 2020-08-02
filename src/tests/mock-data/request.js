@@ -18,6 +18,7 @@ const request = {
       lastName: 'test',
       email: 'testnew@email.com',
       password: Hash.generateSync('bttj6bt'),
+      phoneNumber: '+254712345678',
       lineManagerId: 33
     },
     {
@@ -25,6 +26,7 @@ const request = {
       firstName: 'new',
       lastName: 'test',
       email: 'testnew@email.co',
+      phoneNumber: '+254712345111',
       password: Hash.generateSync('bttj6bt'),
       lineManagerId: 33
     },
@@ -33,6 +35,7 @@ const request = {
       firstName: 'Test',
       lastName: 'case',
       email: 'testcase1@email.co',
+      phoneNumber: '+254712345222',
       password: Hash.generateSync('fghtttfht55'),
       role: 'manager'
     },
@@ -41,6 +44,7 @@ const request = {
       firstName: 'Test',
       lastName: 'case',
       email: 'testcase32@email.co',
+      phoneNumber: '+254712345333',
       password: Hash.generateSync('fghtttfht55'),
       role: 'manager'
     }

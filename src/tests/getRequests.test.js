@@ -35,6 +35,7 @@ describe('/Requests', () => {
       lastName: 'McCain',
       password: Hash.generateSync('1234567e'),
       email: 'john@mccain.com',
+      phoneNumber: '+254712345678',
       lineManagerId: 33
     });
     token = await tokenizer.signToken({
@@ -122,6 +123,7 @@ describe('/Requests', () => {
         firstName: 'John',
         lastName: 'McCain',
         password: Hash.generateSync('1234567e'),
+        phoneNumber: '+254712345678',
         email: 'john@mccain.com'
       });
       token = await tokenizer.signToken({

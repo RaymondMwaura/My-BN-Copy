@@ -17,6 +17,7 @@ export default {
       lastName: 'McCain',
       password: Hash.generateSync('1234567e'),
       email: 'john@mccain.com',
+      phoneNumber: '+254712345678',
       lineManagerId: 1,
     }
   ],

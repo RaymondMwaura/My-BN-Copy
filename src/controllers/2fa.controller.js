@@ -8,7 +8,9 @@ const { setupSecret, get, remove, verify, generate } = twoFA;
 const totpSetup = async (req, res) => {
   const data = await setupSecret(res.locals.user.email, req.body.twoFAType);
 
-  if (req.body.twoFAType === 'sms_text_temp' && !data.phoneNumber) {
+  if (req.body.twoFAType === 'sms_text_temp'
+    && (!data.phoneNumber || data.phoneNumber === 'notProvided')
+  ) {
     return handleError(
       400,
       'You need to set a phoneNumber to activate 2FA with SMS.',

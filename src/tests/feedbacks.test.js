@@ -30,6 +30,7 @@ describe('Hotels feedback', () => {
       lastName: 'Doe',
       password: '12345678',
       email: 'john@barefoot.com',
+      phoneNumber: '+254712345678',
       lineManagerId: manager.id,
     });
     user2 = await db.user.create({
@@ -37,10 +38,11 @@ describe('Hotels feedback', () => {
       lastName: 'Doe',
       password: '12345678',
       email: 'johndoe@barefoot.com',
+      phoneNumber: '+254712345111',
       lineManagerId: manager.id,
     });
 
-    feedbackExample = { feedback: 'This is hotel is great!' };
+    feedbackExample = { feedback: 'This hotel is great!' };
 
     token = await tokenizer.signToken({
       id: user.id,

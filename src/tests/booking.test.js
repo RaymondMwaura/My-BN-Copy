@@ -38,6 +38,7 @@ describe('/booking Accomodation booking', () => {
       lastName: 'McCain',
       password: Hash.generateSync('1234567e'),
       email: 'john@mccain.com',
+      phoneNumber: '+254712345678',
       isVerified: true,
       lineManagerId: manager.id
     });
@@ -68,6 +69,7 @@ describe('/booking Accomodation booking', () => {
       lastName: 'McCain',
       password: Hash.generateSync('1234567e'),
       email: 'john@mccain2.com',
+      phoneNumber: '+254712345111',
       role: 'travel_administrator',
       isVerified: true,
     });

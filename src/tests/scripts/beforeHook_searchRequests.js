@@ -28,6 +28,7 @@ const prepareForTest = async () => {
     lastName: 'Owner',
     password: Bcrypt.generateSync('1234567e'),
     email: 'trip@owner11.com',
+    phoneNumber: '+254712345678',
     role: 'requester',
     isVerified: true,
     lineManagerId: manager.id
@@ -41,6 +42,7 @@ const prepareForTest = async () => {
     lastName: 'Requester',
     password: Bcrypt.generateSync('1234567e'),
     email: 'random@requester11.com',
+    phoneNumber: '+254712345111',
     role: 'requester',
     isVerified: true,
     lineManagerId: manager.id
@@ -83,6 +85,7 @@ const prepareForTest = async () => {
     lastName: 'User',
     password: Bcrypt.generateSync('1234567e'),
     email: 'another@user11.com',
+    phoneNumber: '+254712345222',
     role: 'requester',
     lineManagerId: manager.id
   });
@@ -95,6 +98,7 @@ const prepareForTest = async () => {
     lastName: 'User2',
     password: Bcrypt.generateSync('1234567e'),
     email: 'another2@user11.com',
+    phoneNumber: '+254712345333',
     role: 'requester',
     isVerified: true,
     lineManagerId: manager.id,

@@ -13,6 +13,7 @@ const prepareForTest = async () => {
     lastName: 'Administrator',
     password: Bcrypt.generateSync('1234567e'),
     email: 'super@administrator.com',
+    phoneNumber: '+254712345678',
     role: 'super_administrator'
   });
   const res = await request(app)
@@ -28,6 +29,7 @@ const prepareForTest = async () => {
     lastName: 'Requester',
     password: Bcrypt.generateSync('1234567e'),
     email: 'random@requester.com',
+    phoneNumber: '+254712345111',
     role: 'requester'
   });
   const res2 = await request(app)
@@ -43,6 +45,7 @@ const prepareForTest = async () => {
     lastName: 'Managr',
     password: Bcrypt.generateSync('1234567e'),
     email: 'line@manager123.com',
+    phoneNumber: '+254712345222',
     role: 'manager'
   });
   const res3 = await request(app)

@@ -14,16 +14,10 @@ describe('verify users` emails', () => {
   describe('verification email', () => {
     before(async () => {
       await truncate();
-    });
-    before((done) => {
-      chai
-        .request(app)
+      const res = await chai.request(app)
         .post('/api/v1/auth/signup')
-        .send(userData.user)
-        .end((err, res) => {
-          tokenTest = res.body.data.token;
-          done();
-        });
+        .send(userData.user);
+      tokenTest = res.body.data.token;
     });
 
     it('verify user email successfully', (done) => {

@@ -74,7 +74,7 @@ module.exports = (sequelize, DataTypes) => {
       ]
     },
     phoneNumber: {
-      allowNull: true,
+      allowNull: false,
       type: DataTypes.STRING
     },
     receiveNotification: {

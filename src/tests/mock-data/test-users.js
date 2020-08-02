@@ -3,13 +3,15 @@ export default [
     firstName: 'John',
     lastName: 'Doe',
     password: '123DRyt45678',
-    email: 'john@barefoot.com'
+    email: 'john@barefoot.com',
+    phoneNumber: '+254712345678',
   },
   {
     firstName: 'Eric',
     lastName: 'Doe',
     password: '12Dytfg345678',
-    email: 'eric1@barefoot.com'
+    email: 'eric1@barefoot.com',
+    phoneNumber: '+254712345111',
   },
   {
     lastName: 'Doe',
@@ -25,6 +27,7 @@ export default [
     firstName: 'Jonny',
     lastName: 'Doey',
     password: '12345678',
-    email: 'jonny@barefoot.com'
+    email: 'jonny@barefoot.com',
+    phoneNumber: '+254712345222',
   },
 ];

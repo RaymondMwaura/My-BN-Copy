@@ -3,6 +3,7 @@ const data = {
     firstName: 'bonbon',
     lastName: 'vic',
     email: 'nyabuyabonvic@gmail.com',
+    phoneNumber: '+254712345678',
     password: 'bcjdfyhfggast7687643'
   },
   validUser: 'nyabuyabonvic@gmail.com',
@@ -11,6 +12,7 @@ const data = {
     firstName: 'bonbon',
     lastName: 'vic',
     email: 'nyabuyabonvic@gmail.com',
+    phoneNumber: '+254712345678',
   },
   password: 'Anjkfahesg9wr68734',
   password1: 'wrong',
@@ -18,6 +20,7 @@ const data = {
     firstName: 'bonbon',
     lastName: 'vic',
     email: 'nyabuyabonvjkshdfic@gmail.com',
+    phoneNumber: '+254712345678',
     password: 'Dcjdfyhfggast7687643'
   },
   mailObject: {

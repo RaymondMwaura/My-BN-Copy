@@ -35,6 +35,7 @@ describe('Travel request comments', () => {
       lastName: 'Doe',
       password: '12345678',
       email: 'john@barefoot.com',
+      phoneNumber: '+254712345678',
       lineManagerId: manager.id
     });
     wrongUser = await db.user.create({
@@ -42,6 +43,7 @@ describe('Travel request comments', () => {
       lastName: 'Doe',
       password: '12345678',
       email: 'eric1@barefoot.com',
+      phoneNumber: '+254712345111',
       lineManagerId: manager.id
     });
 

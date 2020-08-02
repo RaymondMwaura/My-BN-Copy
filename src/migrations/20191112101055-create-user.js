@@ -65,7 +65,7 @@ module.exports = {
       type: Sequelize.STRING,
     },
     phoneNumber: {
-      allowNull: true,
+      allowNull: false,
       type: Sequelize.STRING,
     },
     role: {
@@ -92,12 +92,8 @@ module.exports = {
   }),
 
   down: (queryInterface) => Promise.all([
-    queryInterface.dropTable('users'),
     queryInterface.sequelize.query('DROP TYPE IF EXISTS "enum_users_twoFAType" CASCADE'),
     queryInterface.sequelize.query('DROP TYPE IF EXISTS enum_users_role CASCADE'),
-    queryInterface.sequelize.query('DROP TYPE IF EXISTS enum_trips_type CASCADE'),
-    queryInterface.sequelize.query('DROP TYPE IF EXISTS enum_requests_status CASCADE'),
-    queryInterface.sequelize.query('DROP TYPE IF EXISTS enum_requests_type CASCADE'),
-    queryInterface.sequelize.query('DROP TYPE IF EXISTS "enum_bookings_paymentType" CASCADE'),
+    queryInterface.dropTable('users'),
   ]),
 };

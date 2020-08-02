@@ -8,6 +8,7 @@ const signupSchema = Joi.object().keys({
   lastName: Joi.string().strict().trim().required(),
   email: Joi.string().strict().trim().email()
     .required(),
+  phoneNumber: Joi.string().strict().trim().required(),
   password: Joi.string().regex(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/).min(8).required()
 }).options({
   abortEarly: false,
