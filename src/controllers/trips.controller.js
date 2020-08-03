@@ -72,7 +72,7 @@ class Trip {
     const {
       firstName,
       email,
-      phoneNumber
+      // phoneNumber
     } = await UserService.getUserById(currentUser.lineManager);
     const mail = new Mailer({
       name: firstName,
@@ -83,7 +83,8 @@ class Trip {
     });
     await mail.lineManagerNotification();
 
-    await messenger(phoneNumber, `New request initiated by ${currentUser.name}. Kindly review`);
+    // Disable SMS notifications on trip creation pending Twilio account upgrade
+    // await messenger(phoneNumber, `New request initiated by ${currentUser.name}. Kindly review`);
 
     const { lineManager } = currentUser;
 
