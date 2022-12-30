@@ -96,7 +96,7 @@
     "form-data": "^3.0.0",
     "husky": "^3.0.9",
     "lint-staged": "^9.4.2",
-    "mocha": "^6.2.2",
+    "mocha": "^10.2.0",
     "mock-express-request": "^0.2.2",
     "node-mocks-http": "^1.8.0",
     "nyc": "^14.1.1",
