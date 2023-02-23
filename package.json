@@ -65,7 +65,7 @@
     "pug": "^3.0.2",
     "qrcode": "^1.5.0",
     "request": "^2.87.0",
-    "sequelize": "^6.19.0",
+    "sequelize": "^6.28.2",
     "sequelize-cli": "^6.4.1",
     "socket.io": "^4.4.1",
     "speakeasy": "^2.0.0",
